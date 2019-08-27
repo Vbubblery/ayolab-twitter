@@ -32,3 +32,5 @@ run the server:
 ```bash
 npm run watch
 ```
+when there is the conosole log show that "server ready at http://localhost:4000"
+You can go to http://localhost:4000/graphql to mangage Graphql request with UI.
