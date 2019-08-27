@@ -51,15 +51,6 @@ export const getTopNResolverOpt1 = async (__: any, args: any) => {
   const posts = sort(recentlyPostsOfFollowedUsers).desc().slice(0,number);
   const endAt = + new Date();
   return {posts,time:endAt-startAt};
-  
-  // const result = (await Promise.all(followedUsers.map(u=>Promise.resolve(u.posts as any)))).flat().sort((a,b)=> +b.create- +a.create).slice(0,number)
-  // return result
-
-  // const user = await User.createQueryBuilder('user').leftJoin('user.posts','posts').orderBy('posts.create','ASC').getMany()
-  // // const followed = await user.followed;
-  // console.log(user);
-
-  // console.log(await user[0].posts)
 };
 
 // ---------------------------------------------------------
