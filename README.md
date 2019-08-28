@@ -37,8 +37,6 @@ yarn
 
 ## Usage:
 
-For this project I upload the env which includes the infomtion of database connection.
-
 run the server:
 ```bash
 npm run start
