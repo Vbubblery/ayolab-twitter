@@ -31,12 +31,12 @@ export abstract class Basic extends BaseEntity {
   id!: string;
 
   @CreateDateColumn({
-    type: "timestamp"
+    type: "date"
   })
   createdAt!: Date;
 
   @UpdateDateColumn({
-    type: "timestamp"
+    type: "date"
   })
   updatedAt!: Date;
 }
