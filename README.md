@@ -35,7 +35,7 @@ npm run watch
 when there is the conosole log show that "server ready at http://localhost:4000"
 You can go to http://localhost:4000/graphql to mangage Graphql request with UI.
 
-### Create User
+### Create user
 ```
 mutation{
   createUserParse(UserInput:{name:"user1"}){ //change the user1 to the name you want
@@ -46,21 +46,22 @@ mutation{
 
 You can create two or more users to test the followed.
 
-and then you can get all users with the id name and who they followed id.
+### Get all users
+And then you can get all users with the id name and who they followed id.
 
 ```
 query{
   Users {
     id
     name
-		followed{
+    followed{
       id
     }
   }
 }
 
 ```
-
+### Send a Post
 User can send a post, but we need the user's id and the content of the post. The user's id you can get it with the above request.
 
 ```
@@ -76,7 +77,7 @@ mutation {
 }
 
 ```
-
+### User follow
 User can follow others
 ```
 mutation {
@@ -92,6 +93,7 @@ mutation {
 
 ```
 
+### Recently posts
 And then we can get the followed user's renctly posts (Change the userId.)
 
 ```
