@@ -110,6 +110,9 @@ And then we can get the followed user's renctly posts (Change the userId.)
 ```
 query{
   getTopN(userId:"e415f54b-304c-4b89-aa7a-85b7b6eebfdb",number:20){
+    posts{
+      createdAt
+    }
     time
   }
 }
@@ -118,6 +121,9 @@ or
 
 query {
   getTopN1(userId: "e415f54b-304c-4b89-aa7a-85b7b6eebfdb", number: 20) {
+    posts{
+      createdAt
+    }
     time
   }
 }
