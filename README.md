@@ -34,3 +34,13 @@ npm run watch
 ```
 when there is the conosole log show that "server ready at http://localhost:4000"
 You can go to http://localhost:4000/graphql to mangage Graphql request with UI.
+
+## The Take Top N
+
+You can find the logical to implment it in the file: /src/graphql/resolvers/user.ts and start from line 10.
+There are functions: 
+  - getTopNResolver: the worst way to get the TOP N.
+  - getTopNResolverOpt1: the better way, but for the last sort step, I use quick sort, so it chould be better.
+  - Todo: getTopNResolverOpt2: the best way, use partition sort to replace tje quick sort.
+
+
