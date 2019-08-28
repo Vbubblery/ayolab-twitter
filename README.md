@@ -1,5 +1,16 @@
 ﻿# ayolab-twitter
 
+## Feature
+
+- create user
+- user can follow another user
+- user knows who follow him(her)
+- user can send a post
+- user can watch the followed users' posts.
+- user can watch the all recently followed users' posts.
+
+---
+
 ## Preparation:
 - Install Node.js from office website https://nodejs.org/en/ (Ps. the NodeJs version should be >= 10.16.3)
 - Chack the NodeJs and npm (or yarn) version
