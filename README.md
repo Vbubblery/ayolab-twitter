@@ -41,6 +41,6 @@ You can find the logical to implment it in the file: /src/graphql/resolvers/user
 There are functions: 
   - getTopNResolver: the worst way to get the TOP N.
   - getTopNResolverOpt1: the better way, but for the last sort step, I use quick sort, so it chould be better.
-  - Todo: getTopNResolverOpt2: the best way, use partition sort to replace tje quick sort.
+  - Todo: getTopNResolverOpt2: the best way, use partition sort to replace the quick sort.
 
 
