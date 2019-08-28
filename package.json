@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "prod": "cross-env NODE_ENV=prod ts-node .",
-    "start": "cross-env NODE_ENV=dev nodemon . --exec ts-node . -e ts,graphql",
+    "start": "cross-env NODE_ENV=dev ts-node . -e ts,graphql",
     "test": "cross-env NODE_ENV=test jest",
     "eslint:u": "eslint 'src/**' --fix",
     "eslint:w": "eslint src/** --fix",
