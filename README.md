@@ -35,6 +35,83 @@ npm run watch
 when there is the conosole log show that "server ready at http://localhost:4000"
 You can go to http://localhost:4000/graphql to mangage Graphql request with UI.
 
+### Create User
+```
+mutation{
+  createUserParse(UserInput:{name:"user1"}){ //change the user1 to the name you want
+    status
+  }
+}
+```
+
+You can create two or more users to test the followed.
+
+and then you can get all users with the id name and who they followed id.
+
+```
+query{
+  Users {
+    id
+    name
+		followed{
+      id
+    }
+  }
+}
+
+```
+
+User can send a post, but we need the user's id and the content of the post. The user's id you can get it with the above request.
+
+```
+mutation {
+  createPostParse(
+    PostCreate: {
+      userId: "85c24d06-a368-49a4-adc9-ee91b5ac911f"
+      post: { text: "a1" }
+    }
+  ) {
+    status
+  }
+}
+
+```
+
+User can follow others
+```
+mutation {
+  userFollowParse(
+    follow: {
+      userId: "e415f54b-304c-4b89-aa7a-85b7b6eebfdb"         // this should be user's id
+      followId: "85c24d06-a368-49a4-adc9-ee91b5ac911f"       // this is the user who you want to follow's id.
+    }
+  ){
+    status
+  }
+}
+
+```
+
+And then we can get the followed user's renctly posts (Change the userId.)
+
+```
+query{
+  getTopN(userId:"e415f54b-304c-4b89-aa7a-85b7b6eebfdb",number:20){
+    time
+  }
+}
+
+or
+
+query {
+  getTopN1(userId: "e415f54b-304c-4b89-aa7a-85b7b6eebfdb", number: 20) {
+    time
+  }
+}
+
+
+```
+
 ## The Take Top N
 
 You can find the logical to implment it in the file: /src/graphql/resolvers/user.ts and start from line 10.
